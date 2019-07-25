@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient</title>
+    <style>
+        html { height: 100%; }
+        body {
+            min-height: 100%;
+            width: 100%;
+            background-image: linear-gradient(
+                {% for color in colors %}#{{ color }}{% if not loop.last %},{% endif %}{% endfor %}
+            );
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>

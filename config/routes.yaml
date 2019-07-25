@@ -1,0 +1,7 @@
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+index_json:
+    path: /json
+    controller: App\Controller\DefaultController::api
