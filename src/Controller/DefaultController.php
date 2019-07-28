@@ -28,6 +28,10 @@ class DefaultController extends AbstractController
             return new JsonResponse('Please provide the number of colours using the key: colors');
         }
 
+        if ((int)$numberOfColors > 15) {
+            return new JsonResponse('15 is the maximum amount of colours you can request at once');
+        }
+
         $colors = [];
         for ($i = 0; $i < $numberOfColors; $i++) {
             $colors[] = $this->randomColor();
